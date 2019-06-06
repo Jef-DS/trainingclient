@@ -1,0 +1,15 @@
+<table *ngIf="users$| async as users; else loading">
+<thead>
+  <tr><th>Id</th><th>Name</th></tr>
+</thead>
+<tbody *ngFor="let user of users">
+  <tr>
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+  </tr>
+</tbody>
+</table>
+<ng-template #loading>
+  Loading data...
+</ng-template>
+

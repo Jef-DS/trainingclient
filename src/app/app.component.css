@@ -1,0 +1,21 @@
+menu > ul {
+    list-style: none;
+}
+menu> ul> li{
+    display: inline-block;
+}
+
+menu>ul>li>a {
+    display: block;
+    text-decoration: none;
+    padding: 0.2em 0.5em;
+    color: #FFF;
+    background-color: #007;
+}
+menu>ul>li>a.active-link {
+    background-color: #00F;
+}
+menu>ul>li>a:hover{
+    color:#007;
+    background-color: #DDD;
+}
