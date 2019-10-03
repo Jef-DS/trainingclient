@@ -7,6 +7,7 @@ import { CourseDetailsComponent } from './course/course-details/course-details.c
 import { LoginComponent } from './user/login/login.component';
 import { AuthGuardGuard } from './guards/auth-guard.guard';
 import { CourseLoadResolverService } from './services/course-load-resolver.service';
+import {environment} from '../environments/environment';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/courses', pathMatch: 'full'},
@@ -20,7 +21,7 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(appRoutes,
-      {enableTracing: true})
+      {enableTracing: environment.enableRouteTracing})
   ],
   exports: [
     RouterModule
